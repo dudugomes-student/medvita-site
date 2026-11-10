@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('medvita-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('arriving');}sessionStorage.removeItem('medvita-nav')}catch(e){}</script>
 <title>Política de Privacidade | Medvita</title>
 <meta name="description" content="Como o site da Medvita trata dados pessoais: o que é coletado, para quê, por quanto tempo e como pedir acesso, correção ou exclusão.">
 <link rel="canonical" href="https://dudugomes-student.github.io/medvita-site/privacidade.html">
@@ -16,13 +16,16 @@
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plus-jakarta-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/medvita.css">
-<script src="js/main.js" defer></script>
+<script src="js/main.js" defer></script><script src="js/paths-bg.js" defer></script><script src="js/motion.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="curtain" aria-hidden="true"><div class="curtain-panel"><span class="curtain-badge"><img src="assets/logo-160.png" width="210" height="160" alt=""></span><span class="curtain-line"></span></div></div>
+<div class="progress" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="traco" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B79CE8"/><stop offset="1" stop-color="#62229C"/></linearGradient></defs></svg>
 <header class="site-header">
   <div class="wrap header-bar">
     <a class="brand" href="index.html"><picture><source type="image/webp" srcset="assets/logo-80.webp 105w, assets/logo-160.webp 210w" sizes="92px"><img src="assets/logo-80.png" srcset="assets/logo-80.png 105w, assets/logo-160.png 210w" sizes="92px" width="105" height="80" alt="Med Vita Saúde: página inicial"></picture></a>
@@ -34,11 +37,12 @@
   </div>
 </header>
 <main id="conteudo" tabindex="-1">
-<section class="page-top" aria-labelledby="hero-title"><div class="wrap">
-  <p class="eyebrow">Atualizada em 10/11/2026</p>
-  <h1 class="h1" id="hero-title">Política de Privacidade</h1>
+<section class="page-hero" aria-labelledby="hero-title"><div class="wrap">
+  <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a> / Política de Privacidade</nav>
+  <p class="kicker">Atualizada em 10/11/2026</p>
+  <h1 class="title" id="hero-title">Política de <span class="blue">Privacidade</span></h1>
 </div></section>
-<section class="section" style="padding-top:clamp(28px,4vw,48px)"><div class="wrap prose">
+<section class="section" style="padding-top:clamp(32px,5vw,56px)"><div class="wrap prose">
 <p><mark class="confirmar">[CONFIRMAR: texto para revisão jurídica antes do domínio oficial]</mark></p>
 <h2>Quem trata os dados</h2>
 <p>MED VITA SERVIÇOS DE SAÚDE LTDA, CNPJ 14.826.508/0001-58.</p>
@@ -76,7 +80,7 @@
         <p>Fisioterapia, enfermagem, psicologia e nutrição.</p>
       </div>
       <div>
-        <h2>Páginas</h2>
+        <h2>Navegue</h2>
         <ul>
           <li><a href="para-instituicoes.html">Para instituições</a></li>
           <li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li>
@@ -85,7 +89,7 @@
         </ul>
       </div>
       <div>
-        <h2>Contato</h2>
+        <h2>Fale com a Medvita</h2>
         <ul>
           <li><a href="https://wa.me/5511926264855" target="_blank" rel="noopener noreferrer">WhatsApp (11) 92626-4855<span class="sr-only"> (abre em nova aba)</span></a></li>
           <li><a href="mailto:licitacoes@medvitamulti.com.br">licitacoes@medvitamulti.com.br</a></li>
@@ -101,7 +105,7 @@
 </footer>
 <nav class="mobile-bar" aria-label="Atalhos">
   <a class="btn btn-primary" href="https://wa.me/5511926264855" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5 5.3 15.6A8 8 0 1 1 8.6 18.8Z"/><path d="M9 10.5h6M9 13.5h4"/></svg><span>WhatsApp</span><span class="sr-only"> (abre em nova aba)</span></a>
-  <a class="btn btn-line" href="para-instituicoes.html#pedido">Pedir equipe</a>
+  <a class="btn btn-outline" href="para-instituicoes.html"><span>Montar equipe</span></a>
 </nav>
 </body>
 </html>
