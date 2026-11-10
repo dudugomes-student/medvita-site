@@ -59,18 +59,3 @@ document.querySelectorAll('[data-whatsapp-form]').forEach(form => {
     link.focus();
   });
 });
-
-// Montar equipe: mostra quantas áreas foram escolhidas e quais.
-document.querySelectorAll('[data-team]').forEach(form => {
-  const big = form.querySelector('[data-team-count]');
-  const text = form.querySelector('[data-team-text]');
-  const update = () => {
-    const picked = [...form.querySelectorAll('.picks input:checked')].map(i => i.value);
-    big.textContent = picked.length;
-    if (!picked.length) { text.textContent = 'Escolha uma ou mais áreas.'; return; }
-    const list = picked.length > 1 ? `${picked.slice(0, -1).join(', ')} e ${picked[picked.length - 1]}` : picked[0];
-    text.textContent = `${picked.length === 1 ? 'área escolhida' : 'áreas escolhidas'}: ${list}.`;
-  };
-  form.querySelector('.picks').addEventListener('change', update);
-  update();
-});

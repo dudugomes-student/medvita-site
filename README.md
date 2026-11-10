@@ -1,13 +1,13 @@
 # Site da Medvita
 
-Site estático (HTML, CSS e JavaScript, sem dependências no navegador) da MED VITA SERVIÇOS DE SAÚDE LTDA, para o GitHub Pages. Mesma base técnica do site da Cirmed, com a identidade da Medvita.
+Site estático (HTML, CSS e JavaScript, sem dependências no navegador) da MED VITA SERVIÇOS DE SAÚDE LTDA, para o GitHub Pages.
 
 ## Páginas
 
 | Arquivo | Conteúdo |
 | --- | --- |
-| `index.html` | Início: as duas portas (instituição e profissional), as quatro áreas, como a Medvita cuida |
-| `para-instituicoes.html` | Montar equipe: escolhe áreas e turnos e envia o pedido pelo WhatsApp; etapas; licitações |
+| `index.html` | Início: pedido de equipe no topo, as quatro áreas, missão em uma frase, chamada para profissionais |
+| `para-instituicoes.html` | Etapas, pedido de equipe pelo WhatsApp, licitações |
 | `trabalhe-conosco.html` | Cadastro de fisioterapeutas, enfermeiros, psicólogos e nutricionistas pelo WhatsApp |
 | `sobre.html` | Missão, visão, valores e dados da empresa |
 | `contato.html` | WhatsApp, e-mail e Instagram |
@@ -35,4 +35,4 @@ Edite o `build.py` e rode `python3 build.py`. Não edite os `.html` direto.
 
 ## Créditos
 
-Ilustrações 3D: Fluent Emoji, da Microsoft (MIT, ver `assets/3d/LICENSE.txt`), recoloridas para o roxo. Fonte Plus Jakarta Sans (OFL). Fundo de linhas adaptado do "Floating Paths" (21st.dev, MIT). Logo oficial da Med Vita Saúde, tirado do site antigo.
+Fonte Plus Jakarta Sans (OFL). Logo oficial da Med Vita Saúde, tirado do site antigo. O traço com o coração foi desenhado à mão em SVG, a partir do logo (função `trace` no `build.py`).

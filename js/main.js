@@ -1,4 +1,4 @@
-// Menu do celular, cabeçalho ao rolar, entradas e o traço que se desenha. Sem dependências.
+// Menu do celular, cabeçalho ao rolar e o traço que se desenha. Sem dependências.
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.getElementById('menu-principal');
 const compact = matchMedia('(max-width: 1020px)');
@@ -39,20 +39,19 @@ const onScroll = () => {
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
 
-// Entradas (.reveal) e desenhos do traço ([data-draw], .steps) quando entram na tela.
-const reveal = el => el.classList.add(el.matches('.reveal') ? 'is-in' : 'is-drawn');
-const targets = document.querySelectorAll('.reveal, [data-draw], .steps');
+// O traço do logo se desenha quando entra na tela (única animação do site).
+const traces = document.querySelectorAll('[data-draw]');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      reveal(entry.target);
+      entry.target.classList.add('is-drawn');
       io.unobserve(entry.target);
     });
-  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
-  targets.forEach(el => io.observe(el));
+  }, { threshold: 0.3 });
+  traces.forEach(el => io.observe(el));
 } else {
-  targets.forEach(reveal);
+  traces.forEach(el => el.classList.add('is-drawn'));
 }
 
 // Ano no rodapé.
